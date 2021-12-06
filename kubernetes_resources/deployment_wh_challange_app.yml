@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wh-challange
+  labels:
+    app: wh-challange
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wh-challange
+  template:
+    metadata:
+      labels:
+        app: wh-challange
+    spec:
+      containers:
+      - name: wh-challange-node
+        image: antonkolupayev/wh_challange_node:latest
+        ports:
+        - containerPort: 80
