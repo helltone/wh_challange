@@ -19,3 +19,6 @@
 # Run
 ## You can run docker image locally, with:
 <code>docker run -d antonkolupayev/wh_challange_node:latest</code> 
+
+# To run in kubernetes, apply deployment from kubernetes_resources folder
+<code>kubectl apply -f kubernete_resource/deployment_wh_challange_app.yml</code>
